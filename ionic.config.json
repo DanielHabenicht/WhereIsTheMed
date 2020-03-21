@@ -1,0 +1,7 @@
+{
+  "name": "WhereIsTheMed",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
