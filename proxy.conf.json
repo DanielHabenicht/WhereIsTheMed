@@ -1,0 +1,8 @@
+{
+    "/api": {
+        "target": "https://sec-serinus.de",
+        "changeOrigin": true,
+        "secure": true,
+        "logLevel": "debug"
+    }
+}

@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Neue Anfrage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-textarea [(ngModel)]="message" placeholder="Who has Penicillin?"></ion-textarea>
+  <ion-button expand="full" fill="outline" (click)="newInquiry()">Ask</ion-button>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Anfrage {{id}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-list-header>
+      Rückmeldungen ({{summary?.numberOfConfirmationInAlarm + summary?.numberOfNegativeConfirmationInAlarm}} /
+      {{summary?.numberOfPeopleInAlarm}})
+    </ion-list-header>
+
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label>Vorrätig bei {{summary?.numberOfConfirmationInAlarm}}:</ion-label>
+      </ion-item-divider>
+
+      <ion-item *ngFor="let p of succeededPeople">
+        <ion-label>{{p.firstName}} {{p.lastName}}</ion-label>
+      </ion-item>
+
+      <ion-item-divider>
+        <ion-label>Nicht vorrätig bei {{summary?.numberOfNegativeConfirmationInAlarm}}:</ion-label>
+      </ion-item-divider>
+
+      <ion-item *ngFor="let p of failedPeople">
+        <ion-label>{{p.firstName}} {{p.lastName}}</ion-label>
+      </ion-item>
+
+    </ion-item-group>
+  </ion-list>
+</ion-content>
