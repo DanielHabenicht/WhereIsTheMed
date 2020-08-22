@@ -17,7 +17,7 @@
 
     <ion-item-group>
       <ion-item-divider>
-        <ion-label>Vorrätig bei {{summary?.numberOfConfirmationInAlarm}}:</ion-label>
+        <ion-label>Vorrätig bei: ({{summary?.numberOfConfirmationInAlarm}})</ion-label>
       </ion-item-divider>
 
       <ion-item *ngFor="let p of succeededPeople">
@@ -25,7 +25,7 @@
       </ion-item>
 
       <ion-item-divider>
-        <ion-label>Nicht vorrätig bei {{summary?.numberOfNegativeConfirmationInAlarm}}:</ion-label>
+        <ion-label>Nicht vorrätig bei: ({{summary?.numberOfNegativeConfirmationInAlarm}})</ion-label>
       </ion-item-divider>
 
       <ion-item *ngFor="let p of failedPeople">
